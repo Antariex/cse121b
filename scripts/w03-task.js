@@ -66,6 +66,7 @@ document.querySelector("#getTotal").addEventListener("click", function () {
 /* ARRAY METHODS - Functional Programming */
 
 /* Output Source Array */
+// Output Source Array
 let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 document.getElementById("array").textContent = numbersArray.toString();
@@ -75,7 +76,7 @@ let oddNumbers = numbersArray.filter(function (number) {
 });
 document.getElementById("odds").textContent = oddNumbers.toString();
 
-document.querySelector("#evens").innerHTML = numbersArray.filter((number) => number % 2 === 0);
+document.getElementById("evens").textContent = numbersArray.filter((number) => number % 2 === 0).toString();
 
 let multipliedArray = numbersArray.map((number) => number * 2);
 let sumOfMultiplied = multipliedArray.reduce((sum, number) => sum + number, 0);
