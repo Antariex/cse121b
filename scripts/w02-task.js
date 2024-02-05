@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 const fullName = "Ariel Antequiera";
 let currentYear = 2024;
-let profilePicture = '/images/me.jpg'
+let profilePicture = 'images/me.jpg'
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('name');
