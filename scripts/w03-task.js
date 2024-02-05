@@ -69,6 +69,7 @@ document.querySelector("#getTotal").addEventListener("click", function () {
 // Output Source Array
 let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
+// Array Methods
 document.getElementById("array").textContent = numbersArray.toString();
 
 let oddNumbers = numbersArray.filter(function (number) {
@@ -78,11 +79,11 @@ document.getElementById("odds").textContent = oddNumbers.toString();
 
 document.getElementById("evens").textContent = numbersArray.filter((number) => number % 2 === 0).toString();
 
+document.getElementById("sumOfArray").textContent = numbersArray.reduce((sum, number) => sum + number, 0);
+
 let multipliedArray = numbersArray.map((number) => number * 2);
+document.getElementById("multiplied").textContent = multipliedArray.toString();
+
 let sumOfMultiplied = multipliedArray.reduce((sum, number) => sum + number, 0);
 document.getElementById("sumOfMultiplied").textContent = sumOfMultiplied;
 
-function calculateTotal(subtotal, applyDiscount) {
-  const discountRate = applyDiscount ? 0.9 : 1;
-  return subtotal * discountRate;
-}
