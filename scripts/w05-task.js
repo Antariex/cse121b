@@ -49,7 +49,7 @@ const filterTemples = (temples) => {
             displayTemples(temples.filter((temple) => !temple.location.includes('Utah')));
             break;
         case 'older':
-            displayTemples(temples.filter((temple) => new Date(temple.dedicatedDate) < new Date(1950, 0, 1)));
+            displayTemples(temples.filter((temple) => new Date(temple.dedicatedDate).getFullYear() < 1950));
             break;
         case 'all':
         default:
@@ -59,12 +59,8 @@ const filterTemples = (temples) => {
 };
 
 /* Event Listener */
-document.getElementById('filtered').addEventListener('change', () => {
+document.querySelector('#filtered').addEventListener('change', () => {
     filterTemples(templeList);
 });
 
 getTemples();
-
-
-
-
