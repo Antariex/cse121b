@@ -442,19 +442,15 @@ footer {
     margin: 16px;
   }
 
-  .quotes img{
-    margin: 0 auto;
-    font-size: 1.5rem;
-  }
-
   .quote-image {
-    margin: 0 auto;
+    display: block;
+    margin: 0 auto !important;
     height: 160px;
     width: 160px;
     border-radius: 50%;
-    margin: 20px;
     transition: filter 300ms;
     border: 1px #444;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
   }
 }
