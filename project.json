@@ -1,4 +1,4 @@
-    {
+{
         "id": 1,
         "quote": "So many wonderful things are ahead. In coming days, we will see the greatest manifestations of the Savior’s power that the world has ever seen. Between now and the time He returns “with power and great glory,” (Joseph Smith-Matthew 1:36), He will bestow countless privileges, blessings, and miracles upon the faithful.",
         "author": "Russell M. Nelson",
@@ -33,9 +33,10 @@
         "image": "https://www.churchofjesuschrist.org/imgs/a67ea44e15c8baa2ee172db318027cb6fb68121a/full/1600%2C/0/default",
         "topic": "Service"
     },
-    "id": 6,
-    "quote": "Let us here observe, that a religion that does not require the sacrifice of all things, never has power sufficient to produce the faith necessary unto life and salvation.",
-    "author": "Joseph Smith Jr.",
-    "image": "https://www.churchofjesuschrist.org/imgs/671e85a694ea9da1b106afde7a37f8554d414215/full/1600%2C/0/default",
-    "topic": "Faith"
-}
+    {
+        "id": 6,
+        "quote": "Let us here observe, that a religion that does not require the sacrifice of all things, never has power sufficient to produce the faith necessary unto life and salvation.",
+        "author": "Joseph Smith Jr.",
+        "image": "https://www.churchofjesuschrist.org/imgs/671e85a694ea9da1b106afde7a37f8554d414215/full/1600%2C/0/default",
+        "topic": "Faith"
+    }

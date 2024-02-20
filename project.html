@@ -43,33 +43,35 @@
         <img
           src="https://www.churchofjesuschrist.org/imgs/57efa9db7ae0bb889d74594f5a694c413b4483de/full/1600%2C/0/default"
           alt="Rusell M Nelson" title="Rusell M Nelson">
-      </div>
-      <section class="welcome">
-        <h1>Welcome to our <span class="project-title">Inspirational Quotes</span> site</h1>
-        <p>Find inspiration and guidance</p>
+        </div>
+        <section class="welcome">
+          <h1>Welcome to our <span class="project-title">Inspirational Quotes</span> site</h1>
+          <p>Find inspiration and guidance</p>
+        </section>
+        <br>
+        <button class="inspireme">Inspire me!</button>
+        <br>
+        <select class="topics" id="filtered" name="theme">
+          <option value="default" selected>Show by topic</option>
+          <option value="faith">Faith</option>
+          <option value="service">Service</option>
+          <option value="daily">Daily life</option>
+          <option value="revelation">Revelation</option>
+          <option value="all">All topics</option>
+        </select>
       </section>
+      <div id="quotes"></div>
       <br>
-      <button class="inspireme">Inspire me!</button>
-      <br>
-      <select class="topics" id="themeSelect" name="theme">
-        <option value="default" selected>Show by topic</option>
-        <option value="faith">Faith</option>
-        <option value="service">Service</option>
-        <option value="daily">Daily life</option>
-        <option value="revelation">Revelation</option>
-        <option value="all">All topics</option>
-      </select>
-    </section>
-    <div id="quotes"></div>
-  </main>
-  <footer>
-    &copy;<span id="year"></span> | Final Project | CSE 121b
-  </footer>
-  <script src="scripts/main.js"></script>
-  <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
-  <script src="scripts/project.js"></script>
-</body>
-
-</html>
+      <br><br>
+    </main>
+    <footer>
+      &copy;<span id="year"></span> | Final Project | CSE 121b
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="scripts/project.js"></script>
+  </body>
+  
+  </html>
