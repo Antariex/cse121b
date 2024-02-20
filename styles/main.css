@@ -312,4 +312,99 @@ footer {
         max-width: 950px;
     }
 
+
+/* PROJECT STYLES */
+
+.authors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.authors img {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    margin: 20px;
+    transition: filter 300ms;
+    border: 1px #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.authors img:hover {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.authors:hover img:not(:hover) {
+    filter: grayscale(100%) brightness(50%);
+}
+
+.project {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome {
+    background-color: #fff;
+    border: 0;
+}
+
+.welcome h1 {
+    border: 0 !important;
+    font-size: 1.5rem;
+}
+
+.project-title {
+    color: red;
+    margin: 0px;
+    font-family: "Dancing Script", cursive, sans-serif !important;
+    font-style: normal;
+    font-weight: 750;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.03125rem;
+    text-decoration: none !important;
+}
+
+.welcome p {
+    font-size: 1rem;
+}
+.inspireme {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 1px solid #c62828;
+    color: red;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.inspireme:hover {
+    background-color: #c62828;
+    color: #fff;
+}
+
+
+.topics {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #333;
+  }
+
 }
