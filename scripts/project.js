@@ -4,11 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const topicsSelect = document.getElementById('filtered');
 
     inspireButton.addEventListener('click', function () {
-        // Obtener un tema seleccionado (si hay alguno)
-        const selectedTopic = topicsSelect.value;
-
         // Obtener datos de la URL
-        fetch('https://run.mocky.io/v3/42a21265-3d2c-401a-abf3-66c604966814')
+        fetch('https://run.mocky.io/v3/a8033573-2450-47d3-b059-81bdbb947e70')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -18,32 +15,29 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 console.log(data);
 
-                // Filtrar las citas según el tema
-                const filteredQuotes = selectedTopic !== 'default' ?
-                    data.filter(quote => quote.topic === selectedTopic) :
-                    data;
+                // Obtener una cita aleatoria
+                const randomIndex = Math.floor(Math.random() * data.length);
+                const randomQuote = data[randomIndex];
 
                 // Limpiar contenedor de citas
                 quotesContainer.innerHTML = '';
 
-                // Agregar nuevas citas al contenedor
-                filteredQuotes.forEach(quote => {
-                    const quoteElement = document.createElement('div');
-                    quoteElement.classList.add('quote-item');
+                // Agregar la cita aleatoria al contenedor
+                const quoteElement = document.createElement('div');
+                quoteElement.classList.add('quotes');
 
-                    quoteElement.innerHTML = `
-                        <img src="${quote.image}" alt="${quote.author}" title="${quote.author}">
-                        <p>${quote.quote}</p>
-                        <p><strong>Author:</strong> ${quote.author}</p>
-                        <p><strong>Topic:</strong> ${quote.topic}</p>
-                    `;
+                quoteElement.innerHTML = `
+                    <img class="quote-image" src="${randomQuote.image}" alt="${randomQuote.author}" title="${randomQuote.author}">
+                    <p class="quote-text">${randomQuote.quote}</p>
+                    <p class="quote-author">${randomQuote.author}</p>
+                    <p class="quote-topic"><strong>Topic:</strong> ${randomQuote.topic}</p>
+                `;
 
-                    quotesContainer.appendChild(quoteElement);
-                });
+                quotesContainer.appendChild(quoteElement);
+
+                // Mostrar el contenedor de citas
+                quotesContainer.style.display = 'block';
             })
             .catch(error => console.error('Error fetching data:', error));
     });
-
-    // Inicializar la lista de citas al cargar la página
-    inspireButton.click();
 });
